@@ -4,12 +4,13 @@ const Schema = mongoose.Schema
 const UserSchema = new Schema({
     train_name: {
         type: String,  
-        unique:true,
-        dropDups: true,
+        
         required: [true, "Train Name is required"]
     },
     train_number:{
         type: String,
+        unique:true,
+        dropDups: true,
         required: [true, "Train No is required"]
     },
     station_name:{
